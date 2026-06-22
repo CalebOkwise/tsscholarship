@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply for TeamSource's 100% Scholarship Tech Training Program in Cybersecurity, Web Development, Digital Marketing, DevOps, and Data Analytics.">
+  <title>TeamSource | 100% Scholarship Tech Training Program</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="TeamSource home">
+      <span class="brand-mark">T</span>
+      <span>TeamSource</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#benefits">What You Get</a>
+      <a href="#paths">Learning Paths</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="header-cta" href="#apply">Apply Now</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-copy">
+          <div class="scholarship-badge">
+            <span class="badge-dot"></span>
+            100% Scholarship Applications Open
+          </div>
+          <h1>Build Valuable Tech Skills With Our 100% Scholarship Training Program</h1>
+          <p class="hero-subtitle">Choose from Cybersecurity, Web Development, Digital Marketing, DevOps, or Data Analytics and gain practical skills that can open new career opportunities.</p>
+
+          <div class="value-strip" aria-label="Scholarship benefits">
+            <span>Practical Projects</span>
+            <span>Expert Mentorship</span>
+            <span>Internship Placement Opportunities</span>
+            <span>Career Readiness Support</span>
+            <span>Professional Certification</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#apply">Apply Now</a>
+            <a class="btn btn-secondary" href="#paths">View Tracks</a>
+          </div>
+
+          <div class="market-proof">
+            <p>You cannot expect different financial results while relying on the same skills.</p>
+            <div>
+              <strong>5</strong><span>Career-focused tech paths</span>
+            </div>
+            <div>
+              <strong>0</strong><span>Training fee for selected applicants</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="application-card" id="apply" aria-label="Scholarship application">
+          <div class="form-heading">
+            <span class="eyebrow">Apply In Minutes</span>
+            <h2>Submit Your Scholarship Application</h2>
+            <p>Limited scholarship consideration for serious applicants ready to build valuable tech skills.</p>
+          </div>
+
+          <form class="application-form" action="public/submit.php" method="post" aria-label="Scholarship application form">
+            <input type="hidden" name="landing_page" value="teamsource-scholarship">
+            <input type="hidden" name="utm_source" value="">
+            <input type="hidden" name="utm_medium" value="">
+            <input type="hidden" name="utm_campaign" value="">
+            <input type="hidden" name="utm_content" value="">
+            <input type="hidden" name="utm_term" value="">
+            <label class="hp-field" aria-hidden="true">Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+
+            <div class="field-grid two-cols">
+              <label>First Name<input type="text" name="firstName" autocomplete="given-name" required></label>
+              <label>Last Name<input type="text" name="lastName" autocomplete="family-name" required></label>
+            </div>
+
+            <div class="field-grid two-cols">
+              <label>Email Address<input type="email" name="email" autocomplete="email" required></label>
+              <label>Phone Number<input type="tel" name="phone" autocomplete="tel" required></label>
+            </div>
+
+            <div class="field-grid two-cols">
+              <label>WhatsApp Number<input type="tel" name="whatsapp" required></label>
+              <label>Gender<select name="gender" required><option value="">Select gender</option><option>Female</option><option>Male</option><option>Prefer not to say</option></select></label>
+            </div>
+
+            <div class="field-grid two-cols">
+              <label>Age Range<select name="age" required><option value="">Select age range</option><option>16-20</option><option>21-25</option><option>26-30</option><option>31-40</option><option>41+</option></select></label>
+              <label>State of Residence<input type="text" name="state" required></label>
+            </div>
+
+            <label>Highest Educational Qualification<select name="qualification" required><option value="">Select qualification</option><option>SSCE / O'Level</option><option>OND / NCE</option><option>HND / Bachelor's Degree</option><option>Postgraduate Degree</option><option>Other</option></select></label>
+
+            <div class="field-grid two-cols">
+              <label>Current Occupation<input type="text" name="occupation" required></label>
+              <label>Employment Status<select name="employment" required><option value="">Select status</option><option>Employed</option><option>Self-employed</option><option>Unemployed</option><option>Student</option><option>NYSC</option></select></label>
+            </div>
+
+            <label>Preferred Course<select name="course" required><option value="">Choose a course</option><option>Cybersecurity</option><option>Web Development</option><option>Digital Marketing</option><option>DevOps</option><option>Data Analytics</option></select></label>
+
+            <label>Why are you interested in this program?<textarea name="interest" rows="3" required></textarea></label>
+            <label>What are your career goals?<textarea name="goals" rows="3" required></textarea></label>
+
+            <div class="field-grid two-cols">
+              <label>Do you have prior tech experience?<select name="experience" required><option value="">Select answer</option><option>Yes</option><option>No</option></select></label>
+              <label>How did you hear about this program?<select name="source" required><option value="">Select source</option><option>Facebook</option><option>Instagram</option><option>WhatsApp</option><option>Friend or colleague</option><option>Search engine</option><option>Other</option></select></label>
+            </div>
+
+            <label class="consent"><input type="checkbox" name="consent" required> <span>I agree to receive updates regarding this scholarship program.</span></label>
+            <button class="btn btn-primary form-submit" type="submit">Submit My Application</button>
+            <p class="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-pad benefits" id="benefits">
+      <div class="section-heading compact">
+        <span class="eyebrow">What You'll Get</span>
+        <h2>A practical scholarship path built for career movement</h2>
+      </div>
+      <div class="benefit-grid">
+        <article><span class="card-icon">01</span><h3>Practical Projects</h3><p>Build work that helps you show ability, not just attendance.</p></article>
+        <article><span class="card-icon">02</span><h3>Expert Mentorship</h3><p>Learn with guidance from experienced technology professionals.</p></article>
+        <article><span class="card-icon">03</span><h3>Internship Placement Opportunities</h3><p>Eligible learners may be considered for practical exposure.</p></article>
+        <article><span class="card-icon">04</span><h3>Career Readiness Support</h3><p>Improve your CV, interview confidence, and job search direction.</p></article>
+        <article><span class="card-icon">05</span><h3>Professional Certification</h3><p>Receive certification after meeting program completion requirements.</p></article>
+      </div>
+    </section>
+
+    <section class="section-pad paths" id="paths">
+      <div class="section-heading">
+        <span class="eyebrow">Choose Your Learning Path</span>
+        <h2>In-demand skills valued across multiple industries</h2>
+        <p>Companies across Nigeria and globally need people who can protect systems, build products, grow brands, automate delivery, and interpret data.</p>
+      </div>
+      <div class="course-grid">
+        <article class="course-card"><span class="course-icon">CS</span><h3>Cybersecurity</h3><p>Protect systems, networks, and sensitive information.</p><strong>Outcome: Security analyst trainee</strong></article>
+        <article class="course-card"><span class="course-icon">WD</span><h3>Web Development</h3><p>Create responsive websites and practical web applications.</p><strong>Outcome: Junior web developer</strong></article>
+        <article class="course-card"><span class="course-icon">DM</span><h3>Digital Marketing</h3><p>Run campaigns, analyze results, and grow online visibility.</p><strong>Outcome: Digital marketing associate</strong></article>
+        <article class="course-card"><span class="course-icon">DO</span><h3>DevOps</h3><p>Learn deployment, automation, cloud, and delivery workflows.</p><strong>Outcome: DevOps support trainee</strong></article>
+        <article class="course-card"><span class="course-icon">DA</span><h3>Data Analytics</h3><p>Turn raw data into reports, dashboards, and business insight.</p><strong>Outcome: Data analyst trainee</strong></article>
+      </div>
+    </section>
+
+    <section class="section-pad audience">
+      <div class="section-heading compact">
+        <span class="eyebrow">Who Can Apply</span>
+        <h2>Designed for people ready to build better options</h2>
+      </div>
+      <div class="audience-grid">
+        <article><span></span><h3>Career Switchers</h3></article>
+        <article><span></span><h3>Graduates</h3></article>
+        <article><span></span><h3>Working Professionals</h3></article>
+        <article><span></span><h3>Freelancers</h3></article>
+        <article><span></span><h3>Entrepreneurs</h3></article>
+        <article><span></span><h3>Beginners Welcome</h3></article>
+      </div>
+    </section>
+
+    <section class="section-pad faq" id="faq">
+      <div class="section-heading compact">
+        <span class="eyebrow">FAQ</span>
+        <h2>Quick answers before you apply</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>Is the training really 100% scholarship?</summary><p>Yes. Selected applicants receive scholarship access to the training program.</p></details>
+        <details><summary>Do I need prior experience?</summary><p>No. Beginners can apply if they are committed to learning.</p></details>
+        <details><summary>Will I receive certification?</summary><p>Yes. Participants who complete the requirements receive professional certification.</p></details>
+        <details><summary>Is mentorship included?</summary><p>Yes. Mentorship is included to support your learning and career direction.</p></details>
+        <details><summary>Are internship opportunities available?</summary><p>Internship placement opportunities may be available for eligible participants.</p></details>
+        <details><summary>Can beginners apply?</summary><p>Yes. The program welcomes beginners who are ready to put in the work.</p></details>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div>
+        <span class="eyebrow">Apply Today</span>
+        <h2>Your Future Opportunities Depend On The Skills You Build Today</h2>
+        <p>Take the next step toward practical technology skills, stronger confidence, and better career options.</p>
+      </div>
+      <a class="btn btn-light" href="#apply">Apply Now</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="brand"><span class="brand-mark">T</span><span>TeamSource</span></div>
+    <p>100% Scholarship Tech Training Program</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
