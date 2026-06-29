@@ -13,7 +13,7 @@ start_secure_session();
 
 if (clean_string($_POST['website'] ?? '') !== '') {
     mark_submission_time();
-    redirect_to('../index.html?success=1#apply');
+    redirect_to('../thank-you.html?success=1#apply');
 }
 
 try {
@@ -108,7 +108,7 @@ try {
 
     send_lead_notification($lead);
 
-    redirect_to('../index.html?success=1#apply');
+    redirect_to('../thank-you.html?success=1#apply');
 } catch (Throwable $throwable) {
     error_log('Lead submission failed: ' . $throwable->getMessage());
     redirect_to('../index.html?error=server#apply');

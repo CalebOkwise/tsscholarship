@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application Received | Teamsource Technologies</title>
+  <meta name="description" content="Thank you for applying for the Teamsource Tech Scholarship." />
+  <link rel="icon" type="image/png" href="./logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { poppins: ["Poppins", "sans-serif"] },
+          colors: { brand: { 50: "#eefaf3", 100: "#d8f2e2", 600: "#1C8C49", 700: "#166b38" } },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="min-h-screen bg-brand-50 font-poppins text-slate-900">
+  <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="/" class="flex items-center">
+        <img src="./logo.png" alt="Teamsource logo" class="h-10 w-auto" />
+      </a>
+      <button id="headerShareButton" type="button"
+        class="rounded-md bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-700">Share
+        Now</button>
+    </div>
+  </header>
+
+  <main class="mx-auto flex max-w-3xl items-center px-4 py-12 sm:px-6 lg:px-8">
+    <section class="w-full rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm sm:p-10">
+      <p
+        class="inline-flex rounded-full bg-brand-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-700">
+        Application Submitted</p>
+      <h1 class="mt-5 text-3xl font-extrabold sm:text-4xl">Thank You for Applying!</h1>
+      <p class="mx-auto mt-4 max-w-xl text-slate-600">Your application was received successfully. Kindly use the link
+        below to join the WhatsApp community.</p>
+
+      <!-- I DONT WANT BUTTONS LEADING BACK TO FORM, BECAUSE WE HAVE LIMITED SUNMISSIONS ON NETLIFY
+
+        <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <a href="/" class="rounded-md bg-brand-600 px-6 py-3 text-sm font-semibold text-white hover:bg-brand-700">Back to Homepage</a>
+       <a href="/#application-form" class="rounded-md border border-brand-600 px-6 py-3 text-sm font-semibold text-brand-700 hover:bg-brand-50">Submit Another Application</a>
+        </div> 
+      
+        -->
+
+      <div id="share-section"
+        class="mx-auto mt-10 max-w-2xl scroll-mt-28 rounded-2xl border border-brand-100 bg-brand-50 p-6 text-left">
+        <div class="text-center">
+          <h2 class="text-xl font-bold text-slate-900">Share This Scholarship</h2>
+          <p class="mt-2 text-sm text-slate-600">Help someone else discover this limited opportunity by sharing the
+            message below on your social platforms.</p>
+        </div>
+
+        <div class="mt-6 overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-sm">
+          <img src="scholarship design.png"
+            alt="Digital marketing scholarship promotional graphic for Teamsource Training Institute"
+            class="h-auto w-full object-cover" />
+        </div>
+
+        <div class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-sm text-slate-600">Download this graphic and attach it to your post when sharing the
+            scholarship.</p>
+          <a href="scholarship design.png" download="teamsource-digital-marketing-scholarship.png"
+            class="inline-flex items-center justify-center rounded-md bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-700">
+            Download Image
+          </a>
+        </div>
+
+        <textarea id="shareMessage" readonly
+          class="mt-5 h-52 w-full rounded-xl border border-brand-100 bg-white px-4 py-3 text-sm leading-6 text-slate-700 focus:outline-none">Teamsource Technologies is offering a very limited training scholarship on different tech skills, it also includes mentorship, training and guidance.
+
+Use the link below to register now if you're interested.
+
+https://institute.teamsource.net/training/</textarea>
+
+        <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
+          <button id="nativeShareButton" type="button"
+            class="rounded-md bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-700">Share
+            Now</button>
+          <a id="whatsappShareLink" href="#" target="_blank" rel="noopener noreferrer"
+            class="rounded-md border border-brand-600 px-5 py-3 text-center text-sm font-semibold text-brand-700 transition hover:bg-white">WhatsApp</a>
+          <a id="xShareLink" href="#" target="_blank" rel="noopener noreferrer"
+            class="rounded-md border border-brand-600 px-5 py-3 text-center text-sm font-semibold text-brand-700 transition hover:bg-white">X
+            / Twitter</a>
+          <a id="facebookShareLink" href="#" target="_blank" rel="noopener noreferrer"
+            class="rounded-md border border-brand-600 px-5 py-3 text-center text-sm font-semibold text-brand-700 transition hover:bg-white">Facebook</a>
+          <button id="copyShareButton" type="button"
+            class="rounded-md border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-white">Copy
+            Text</button>
+        </div>
+
+        <p id="shareStatus" class="mt-4 text-center text-sm font-medium text-brand-700" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+  <script>
+    const shareMessage = `Teamsource Technologies is offering a very limited training scholarship on different tech skills, with mentorship, training and guidance.
+
+Use the link below to register now if you're interested.
+
+https://institute.teamsource.net/training/;
+
+    const shareUrl = "https://institute.teamsource.net/training/";
+    const shareImageUrl = "scholarship design.png";
+    const encodedMessage = encodeURIComponent(shareMessage);
+    const encodedUrl = encodeURIComponent(shareUrl);
+
+    const shareStatus = document.getElementById("shareStatus");
+    const shareInput = document.getElementById("shareMessage");
+    const headerShareButton = document.getElementById("headerShareButton");
+    const nativeShareButton = document.getElementById("nativeShareButton");
+    const copyShareButton = document.getElementById("copyShareButton");
+
+    document.getElementById("whatsappShareLink").href = `https://wa.me/?text=${encodedMessage}`;
+        document.getElementById("xShareLink").href = `https://twitter.com/intent/tweet?text=${encodedMessage}`;
+    document.getElementById("facebookShareLink").href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedMessage}`;
+
+    async function openShareSheet() {
+      try {
+        const shareData = {
+          title: "Teamsource Technologies Tech Scholarship",
+          text: shareMessage,
+          url: shareUrl,
+        };
+
+        if (navigator.canShare) {
+          const imageResponse = await fetch(shareImageUrl);
+          const imageBlob = await imageResponse.blob();
+          const imageFile = new File([imageBlob], "teamsource-digital-marketing-scholarship.png", { type: imageBlob.type || "image/png" });
+
+          if (navigator.canShare({ files: [imageFile] })) {
+            shareData.files = [imageFile];
+          }
+        }
+
+        await navigator.share(shareData);
+        shareStatus.textContent = "Share sheet opened successfully.";
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          shareStatus.textContent = "Sharing was not completed. You can download the image or use the buttons below instead.";
+        }
+      }
+    }
+
+    if (!navigator.share) {
+      nativeShareButton.classList.add("hidden");
+    }
+
+    headerShareButton.addEventListener("click", async () => {
+      if (navigator.share) {
+        await openShareSheet();
+        return;
+      }
+
+      window.open(`https://wa.me/?text=${encodedMessage}`, "_blank", "noopener,noreferrer");
+      shareStatus.textContent = "Your device does not support direct sharing here, so WhatsApp sharing was opened instead.";
+    });
+
+    nativeShareButton.addEventListener("click", async () => {
+      await openShareSheet();
+    });
+
+    copyShareButton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(shareMessage);
+        shareInput.select();
+        shareStatus.textContent = "Share text copied. You can now paste it anywhere.";
+      } catch (error) {
+        shareStatus.textContent = "Copy failed on this device. Please select and copy the message manually.";
+      }
+    });
+  </script>
+</body>
+
+</html>
